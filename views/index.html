@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="keywords" content="笙歌离人的博客">
+    <meta name="description" content="专注前端技术,关注影视后期,设计等领域">
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="public/favicon.ico" type="image/x-icon"/>
+    <title id="htmlTitle">互动影视|前端达人</title>
+
+    <!-- Index Css -->
+    <link href="css/application.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<a class="back-history iconfont" id="backHistory">&#xe61e;</a>
+
+<div class="blog-main">
+    <nav class="blog-nav" id="blogNav">
+        <div class="avatar">
+            <span><img src="img/avatar.jpg"></span>
+        </div>
+        <div class="introduction">
+            <p>我是笙歌离人,欢迎大家访问我的博客.希望与大家分享个人知识与经验.我个人比较关注<a>前端</a>的各种技术,对于<span>UI设计与视频制作</span>等也有所涉足.</p>
+        </div>
+        <div class="navigation web-font" id="navigation"></div>
+        <ul class="share">
+            <li><a class="qq" title="QQ"></a></li>
+            <li><a class="tencent-weibo" title="腾讯微博"></a></li>
+            <li><a class="sina-weibo" title="新浪微博"></a></li>
+            <li><a class="jiathis_button_weixin weixin" title="微信"></a></li>
+            <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1" charset="utf-8"></script>
+        </ul>
+        <a class="nav-close iconfont" id="navClose">&#xe62b;</a>
+    </nav>
+    <div class="blog-content">
+        <h2 id="blogTypeTitle">
+            <a class="menu iconfont">&#xe62a;</a>
+            <span>笙歌离人的博客</span>
+        </h2>
+
+        <div class="blog-typelist" id="blogTypeList">
+            <ul class="blog-list web-font" id="blogList"></ul>
+            <div class="pagination-container" id="paginationContainer">
+                <a class="pagination-arrow previous">Prev</a>
+                <div class="pagination-select">
+                    <select class="assignto"></select>
+                </div>
+                <a class="pagination-arrow next">Next</a>
+            </div>
+        </div>
+
+        <div class="blog-detail" id="blogDetail">
+            <div class="blog-func">
+                <span class="update-time"></span>
+                <div class="category">
+                    <a data-typeid=""></a>
+                </div>
+                <div class="share">
+                    <a class="qq iconfont" title="QQ">&#xe609;</a>
+                    <a class="jiathis_button_weixin weixin iconfont" title="微信">&#xe61a;</a>
+                    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1" charset="utf-8"></script>
+                    <a class="sina-weibo iconfont" title="新浪微博">&#xe619;</a>
+                    <a class="tencent-weibo" title="腾讯微博"><img src="img/tencent-weibo.png"></a>
+                </div>
+            </div>
+            <div class="blog-article"></div>
+            <div class="pagination-container">
+                <a class="pagination-arrow previous">Prev</a>
+                <a class="pagination-arrow next">Next</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a class="backto-top iconfont" id="backToTop">&#xe61b;</a>
+
+<!-- jQuery Javascript -->
+<script src="assets/js/jquery-3.1.0.min.js"></script>
+<!-- jQuery.cookie Javascript -->
+<script src="assets/js/jquery.cookie.js"></script>
+<!-- Public Javascript -->
+<script src="js/public.js"></script>
+<!-- Index Javascript -->
+<script src="js/index.js"></script>
+
+</body>
+</html>

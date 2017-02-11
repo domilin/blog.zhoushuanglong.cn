@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="public/favicon.ico" type="image/x-icon"/>
+    <title>互动影视|前端达人|后台管理</title>
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Css -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Summernote Css -->
+    <link href="assets/css/summernote.css" rel="stylesheet">
+
+
+    <!-- Application Css -->
+    <link href="css/application.css" rel="stylesheet">
+
+</head>
+
+<body class="huanshu management">
+
+<nav class="navbar navbar-default navbar-fixed-top navhs">
+    <div class="hsmaxwith">
+        <div class="container-fluid">
+
+            <!-- logo+小屏幕显示与隐藏导航 -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand huanshu_logo"><img src="img/brand-white.png" alt="互动影视|前端达人"/></a>
+            </div>
+
+            <!-- 导航列表 -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav" id="blogNav">
+                    <li class="active" data-type="blog"><a>博客管理</a></li>
+                    <li data-type="file"><a>文件管理</a></li>
+                    <li data-type="user"><a>用户管理</a></li>
+                    <li data-type="nav"><a>导航管理</a></li>
+                    <li data-type="other"><a>其它</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+
+            <!--用户管理-->
+            <div class="panel panel-primary management_panel" data-type="user">
+                <div class="panel-heading">
+                    <h3 class="panel-title">用户管理</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="func_area">
+                        <button type="submit" class="btn btn-danger" id="userAdd">添加用户</button>
+                    </div>
+                    <table class="table table-bordered table-hover table-striped">
+                        <thead>
+                        <tr>
+                            <th>用户名</th>
+                            <th>密码</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody id="userList"></tbody>
+                    </table>
+
+                    <!-- pager -->
+                    <ul class="pager" id="userPager">
+                        <li class="previous"><a><span aria-hidden="true">&larr;</span>上一页</a></li>
+                        <li class="gotopage">
+                            <div class="gotopage_con">
+                                <select class="assignto">
+                                    <option>1</option>
+                                    <option>2</option>
+                                </select>
+                            </div>
+                        </li>
+                        <li class="next"><a>下一页<span aria-hidden="true">&rarr;</span></a></li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <!--导航管理-->
+            <div class="panel panel-primary management_panel" data-type="nav">
+                <div class="panel-heading">
+                    <h3 class="panel-title">导航管理</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="func_area">
+                        <button type="submit" class="btn btn-danger" id="navAdd">添加导航</button>
+                    </div>
+                    <table class="table table-bordered table-hover table-striped">
+                        <thead>
+                        <tr>
+                            <th>导航名称</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody id="navList"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!--博客管理-->
+            <div class="panel panel-primary management_panel" data-type="blog">
+                <div class="panel-heading">
+                    <h3 class="panel-title">博客管理</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="func_area">
+                        <button type="submit" class="btn btn-danger" id="blogAdd">添加博客</button>
+                    </div>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" id="blogNavTab"></ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content blog_content">
+                        <div class="tab-pane active">
+                            <table class="table table-hover table-striped">
+                                <thead>
+                                <tr>
+                                    <th>标题</th>
+                                    <th>推荐</th>
+                                    <th>类型</th>
+                                    <th>创建时间</th>
+                                    <th>更新时间</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <tbody id="blogList"></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- pager -->
+                    <ul class="pager" id="blogPager">
+                        <li class="previous"><a><span aria-hidden="true">&larr;</span>上一页</a></li>
+                        <li class="gotopage">
+                            <div class="gotopage_con">
+                                <select class="assignto">
+                                    <option>1</option>
+                                    <option>2</option>
+                                </select>
+                            </div>
+                        </li>
+                        <li class="next"><a>下一页<span aria-hidden="true">&rarr;</span></a></li>
+                    </ul>
+
+                </div>
+            </div>
+
+
+            <!--文件管理-->
+            <div class="panel panel-primary management_panel" data-type="file">
+                <div class="panel-heading">
+                    <h3 class="panel-title">文件管理</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="func_area">
+                        <a class="btn btn-danger" href="cropper.html">图片剪裁上传</a>
+                        <button type="submit" class="btn btn-danger" id="formDataBtn">普通上传</button>
+                        <button type="submit" class="btn btn-danger" id="largeFileBtn">大文件上传</button>
+                        <button type="submit" class="btn btn-danger" id="clearTemps">清除缓存</button>
+                    </div>
+                    <table class="table table-bordered table-hover table-striped">
+                        <thead>
+                        <tr>
+                            <th>文件名称</th>
+                            <th>文件大小</th>
+                            <th>上传时间</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody id="fileList"></tbody>
+                    </table>
+
+                    <!-- pager -->
+                    <ul class="pager" id="filePager">
+                        <li class="previous"><a><span aria-hidden="true">&larr;</span>上一页</a></li>
+                        <li class="gotopage">
+                            <div class="gotopage_con">
+                                <select class="assignto">
+                                    <option>1</option>
+                                    <option>2</option>
+                                </select>
+                            </div>
+                        </li>
+                        <li class="next"><a>下一页<span aria-hidden="true">&rarr;</span></a></li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <!--socket.io-->
+            <div class="panel panel-primary management_panel" data-type="other">
+                <div class="panel-heading">
+                    <h3 class="panel-title">实时聊天</h3>
+                </div>
+                <div class="panel-body">
+                    ngix静态服务器
+                    socket.io </br>
+                    html5- 文件上传,拖拽等 api</br>
+                    html5-websoket, web worker</br>
+                    html5-canvas,webgl,map等等新功能</br>
+                    css3-各种特效练习</br>
+                    标签</br>
+                    搜索功能</br>
+                    数据库账号密码用户权限</br>
+                    博客用户系统</br>
+                    博客评论系统</br>
+
+                    <h3>HTML5新增API</h3>
+                    多媒体：video、audio、</br>
+                    游戏：canvas、webgl、</br>
+                    存储：localstorage、sessonstorage、websql、indexedDB</br>
+                    网络：websocket</br>
+
+                    <h3>index待做</h3>
+                    webfont，iconfont，进入页面动画，鼠标移入移出动画细节，所有动画都用css3或新的js动画函数</br>
+
+                    <h3>待做+问题</h3>
+                    threejs三维效果虚拟现实DEMO，进入博客css3动画细节，anumste.css，https<br/>
+                    删除delflag标记，页面及后端改为模块化文件调用<br/>
+                    设置了两个静态资源目录后请求卡顿问题，session加密，cookieParse加密cookie<br/>
+                    hostus香港vps<br/>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!--用户添加与编辑-->
+<div class="modal fade" id="userAddEdit">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="userAddEditTitle">用户添加与编辑</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <input id="userName" name="username" type="text" class="form-control" placeholder="用户名"/>
+                    </div>
+                    <div class="form-group">
+                        <input id="password" name="password" type="password" class="form-control" placeholder="密码"/>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="sureUserAddEdit">确认</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--导航添加与编辑-->
+<div class="modal fade" id="navAddEdit">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="navAddEditTitle">导航添加与编辑</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <input id="navName" type="text" class="form-control" placeholder="请输入导航名称"/>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="sureNavAddEdit">确认</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--博客添加与编辑-->
+<div class="modal fade" id="blogAddEdit">
+    <div class="modal-dialog blog_modal_dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="blogAddEditTitle">博客添加与编辑</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <input id="blogTitle" type="text" class="form-control" placeholder="请输入文章名称"/>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control" id="blogRecommend">
+                            <option value="0">不推荐</option>
+                            <option value="1">推荐</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control" id="blogType"></select>
+                    </div>
+                    <div class="form-group">
+                        <div id="blogContent"></div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="sureBlogAddEdit">确认</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--formdata普通上传-->
+<div class="modal fade" id="formDataUpload">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">FormData文件上传</h4>
+            </div>
+            <div class="modal-body">
+                <form id="formDataForm" action="/blog/upload/formdata" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <input type="file" name="file"/>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="sureFormData">确认</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--largefile大文件上传-->
+<div class="modal fade" id="largeFileUpload">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">大文件上传</h4>
+            </div>
+            <div class="modal-body">
+                <form id="largeFileForm" action="/blog/upload/largefile" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <input id="largeFileInput" type="file" name="file"/>
+                    </div>
+                </form>
+                <div class="progress">
+                    <div id="uploadProcesss" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                         aria-valuemax="100" style="min-width: 2em;">
+                        0%
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="sureLargeFile">确认</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- jQuery Javascript -->
+<script src="assets/js/jquery.min.js"></script>
+<!-- Bootstrap Javascript -->
+<script src="assets/js/bootstrap.min.js"></script>
+<!-- Summernote Javascript -->
+<script src="assets/js/summernote.min.js"></script>
+<!-- Summernote-lang Javascript -->
+<script src="assets/js/summernote-zh-CN.js"></script>
+
+
+<!-- Public Javascript -->
+<script src="js/public.js"></script>
+<!-- Management Javascript -->
+<script src="js/management.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,1441 @@
+
+body.huanshu {
+    padding-top: 80px;
+    background: #f5f8fa;
+}
+
+.hsmaxwith {
+    margin: 0 auto;
+    width: 95%;
+    max-width: 1200px;
+}
+
+@media (max-width: 768px) {
+    .hsmaxwith {
+        width: 100%;
+    }
+}
+
+.card {
+    margin-bottom: 30px;
+    background: #ffffff;
+    border: 1px solid #d3e0e9;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.hsbutton, .hsbutton_blue {
+    padding: 5px 10px;
+    display: inline-block;
+    background: #ffffff;
+    border: 1px solid #2a88bd;
+    border-radius: 4px;
+    color: #2a88bd;
+    font-family: "Microsoft YaHei";
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.hsbutton_blue {
+    background: #3097d1;
+    color: #fff;
+}
+
+.hsbutton span {
+    margin-right: 4px;
+}
+
+.hsbutton:hover, .hsbutton_blue {
+    background: #2a88bd;
+    color: #fff;
+    text-decoration: none;
+}
+
+.hsbutton_blue:hover {
+    background: #2579a9;
+    border-color: #1f648b;
+}
+
+/*nav*/
+.navhs {
+    background: #3097d1;
+    border: none;
+    border-bottom: 1px solid #1c73a5;
+    border-radius: inherit;
+}
+
+.navhs .huanshu_logo {
+    padding: 13.5px 13.5px 13.5px 0;
+}
+
+.navhs .navbar-nav > li > a, .navhs .navbar-nav > li > a:focus, .navhs .navbar-nav > li > a:hover {
+    color: #d1e8f4;
+    font-family: "Microsoft YaHei";
+}
+
+.navhs .navbar-nav > .active > a, .navhs .navbar-nav > .active > a:focus, .navhs .navbar-nav > .active > a:hover {
+    background: none;
+    color: #fff;
+    font-family: "Microsoft YaHei";
+}
+
+.navhs .navbar-nav a {
+    cursor: pointer;
+}
+
+.navhs .navbar-brand img {
+    height: 100%;
+}
+
+.navhs .form-group {
+    background: #ffffff;
+    border: 1px solid #1c73a5;
+    border-radius: 3px;
+}
+
+.navhs .form-group input {
+    width: 120px;
+}
+
+.navhs .form-control, .navhs .btn {
+    background: none;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    font-family: "Microsoft YaHei";
+    outline: none;
+}
+
+.navhs .searchbtn {
+    color: #1c73a5;
+}
+
+.navhs .notice_icon {
+    color: #d1e8f4;
+}
+
+.navhs .headerpic {
+    padding: 7px 0;
+}
+
+.navbar > .container .headerpic, .navbar > .container-fluid .headerpic {
+    margin-left: -10px;
+}
+
+.navhs .navbar-toggle {
+    padding: 9px 10px;
+    border-color: #1c73a5;
+}
+
+.navhs .navbar-toggle:focus {
+    background: none;
+}
+
+.navhs .navbar-toggle .icon-bar {
+    background: #fff;
+}
+
+.navhs .navbar-collapse, .navhs .navbar-form {
+    border-color: #2882b5;
+}
+
+.navhs .navbar-form {
+    padding: 0;
+}
+
+.navhs .navbar-right {
+    margin: 0;
+}
+
+.navhs .dropdown-menu {
+    top: 50px;
+}
+
+.navhs .logoutgroup {
+    position: relative;
+}
+
+.navhs .logoutgroup .logoutgroup_con {
+    position: absolute;
+    right: -10px;
+    top: 65px;
+    background: #fff;
+    border: 1px solid #d4dbe0;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px 0 rgba(219, 225, 230, 1);
+    display: none;
+    width: 200px;
+    color: #3097d1;
+    font-family: "Microsoft YaHei";
+    opacity: 0;
+    transition: all 0.2s ease 0s;
+    z-index: 1000;
+}
+
+.navhs .logoutgroup .logoutgroup_con.focus {
+    top: 55px;
+    opacity: 1;
+}
+
+.navhs .logoutgroup .logoutgroup_con:before {
+    content: "";
+    border-width: 12px;
+    position: absolute;
+    right: 15px;
+    top: -24px;
+    border-style: solid;
+    border-color: transparent transparent #d4dbe0;
+    font-size: 0;
+    line-height: 0;
+}
+
+.navhs .logoutgroup .logoutgroup_con:after {
+    content: "";
+    border-width: 12px;
+    position: absolute;
+    right: 15px;
+    top: -23px;
+    border-style: solid dashed dashed;
+    border-color: transparent transparent #fff;
+    font-size: 0;
+    line-height: 0;
+}
+
+.navhs .logoutgroup .logoutgroup_con a {
+    padding: 10px 15px;
+    border-radius: 4px;
+    display: block;
+    cursor: pointer;
+}
+
+.navhs .logoutgroup .logoutgroup_con a:hover {
+    background: #f5f8fa;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .navhs .navbar-form {
+        margin: 0;
+        padding: 10px 15px;
+        border-top: none;
+    }
+
+    .navhs .navbar-right {
+        margin: 0 -15px;
+    }
+
+    .navhs .form-group input {
+        float: left;
+        width: 88%;
+    }
+
+    .navhs .form-group button {
+        float: right;
+        width: 12%;
+    }
+
+    .navhs .huanshu_logo {
+        padding: 13.5px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .navhs .container-fluid {
+        padding: 0;
+    }
+}
+
+/*user_info*/
+.user_info {
+    width: 100%;
+}
+
+.user_info .uibg {
+    background: #2a3136;
+    height: 150px;
+    overflow: hidden;
+}
+
+.user_info .uibg img {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    display: block;
+    height: 100%;
+}
+
+@media (max-width: 992px) {
+    .user_info .uibg img {
+        height: auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 320px) {
+    .user_info .uibg img {
+        height: 100%;
+        width: auto;
+    }
+}
+
+.user_info .uicon {
+    position: relative;
+    padding: 15px;
+}
+
+.user_info .uicon .uipic {
+    margin-left: -50px;
+    padding: 5px;
+    position: absolute;
+    left: 50%;
+    top: -56px;
+    background: #fff;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    display: block;
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+}
+
+.user_info .uicon .uipic img {
+    border: 1px solid #cececf;
+    border-radius: 50px;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.user_info .uicon h4.uiname {
+    margin-top: 40px;
+    font-weight: bold;
+    font-family: "Microsoft YaHei";
+    text-align: center;
+}
+
+.user_info .uicon a {
+    color: #1e3948;
+}
+
+.user_info .uicon a:hover {
+    text-decoration: none;
+}
+
+.user_info .uicon .uiintro {
+    font-size: 12px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.user_info .uicon .uimore {
+    margin: 30px 0 0;
+    padding: 0 10%;
+    display: block;
+    width: 100%;
+    font-family: "Microsoft YaHei";
+}
+
+.user_info .uicon .uimore li {
+    float: left;
+    display: block;
+    width: 50%;
+    list-style: none;
+    text-align: center;
+}
+
+.user_info .uicon .uimore h5 {
+    font-weight: bold;
+}
+
+/*mybook*/
+.mybook h4 {
+    margin: 0;
+    padding: 15px 15px 10px;
+    border-bottom: 1px solid #fff;
+    color: #1e3948;
+    font-family: "Microsoft YaHei";
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.mybook h4 a, .mybook h4 em {
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.mybook h4 em {
+    margin: 0 5px;
+    font-style: normal;
+}
+
+.mybook .mbcon a {
+    padding: 10px 15px;
+    border-bottom: 1px solid #fff;
+    display: block;
+    color: #555555;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.mybook .mbcon a:hover {
+    background: #f5f8fa;
+}
+
+.mybook .mbcon a:last-child {
+    border: none;
+}
+
+.mybook .mbcon a:hover {
+    text-decoration: none;
+}
+
+.mybook .mbcon h6 {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 80%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.mybook .mbcon span {
+    float: right;
+    background: url("../img/icon/iconfont-arrow01right.png") no-repeat right;
+    background-size: auto 100%;
+    display: block;
+    height: 100%;
+    width: 20%;
+    text-align: right;
+    text-indent: 9999em;
+}
+
+/*bookitem*/
+.bookitem {
+    padding: 20px;
+    border-bottom: 1px solid #d3e0e9;
+}
+
+.bookitem .hsbutton {
+    margin-top: 5px;
+}
+
+.bookitem:last-child {
+    border: none;
+}
+
+.bookitem .bookuser, .book_comment .bc_pic {
+    float: left;
+    background: #fff;
+    border-radius: 30px;
+    height: 60px;
+    width: 60px;
+    overflow: hidden;
+}
+
+.bookitem .bookuser img, .book_comment .bc_pic img {
+    height: 100%;
+    width: 100%;
+}
+
+.bookitem .bookcon, .book_comment .bc_con {
+    float: right;
+    width: 85%;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .bookitem .bookuser {
+        height: 40px;
+        width: 40px;
+    }
+
+    .bookitem .bookcon {
+        width: 80%;
+    }
+}
+
+.bookitem .bookcon img {
+    margin: 0 0 10px 0;
+    display: block;
+    width: 100%;
+}
+
+.bookitem .bookcon h5 {
+    float: left;
+    width: 70%;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+
+.bookitem .bookcon h5 a {
+    display: block;
+    width: 100%;
+    color: #1e3948;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.bookitem .bookcon h5 a:hover {
+    text-decoration: none;
+}
+
+.bookitem .bookcon .booktitle {
+    font-family: "Microsoft YaHei";
+}
+
+.bookitem .bookcon .booktitle small {
+    float: right;
+    width: 20%;
+    text-align: right;
+}
+
+.bookitem .bookcon .booktitle small a {
+    margin: 10px 0;
+    display: block;
+    color: #9da9b0;
+    cursor: pointer;
+}
+
+.bookitem .bookcon .booktitle small a:hover {
+    text-decoration: none;
+}
+
+.bookitem .bookcon p {
+    margin: 0 0 10px 0;
+    display: block;
+    color: #1e3948;
+    font-size: 12px;
+    line-height: 24px;
+}
+
+.bookitem .bookcon .bookinfo {
+    padding-bottom: 8px;
+    color: #9da9b0;
+}
+
+.bookitem .bookcon .bookinfo em {
+    margin: 0 5px;
+    font-style: normal;
+}
+
+.bookitem .bookcon .bookinfo span {
+    display: inline-block;
+}
+
+.bookitem .bookcon .bookscore {
+    margin-top: 20px;
+}
+
+.bookitem .publish_btn {
+    position: relative;
+    height: 34px;
+    width: 100%
+}
+
+.bookitem .publish_btn input.form-control {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-color: #d4dbe0;
+    border-radius: 4px;
+    width: 100%;
+    color: #a1acb3;
+    font-size: 12px;
+    z-index: 0;
+}
+
+.bookitem .publish_btn button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-color: #d4dbe0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    width: 100px;
+    color: #536570;
+    font-family: "Microsoft YaHei";
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.bookitem .publish_btn button:focus {
+    border-color: #d4dbe0;
+}
+
+.bookitem .bookinfo a.douban_url {
+    color: #9da9b0;
+}
+
+/*realtime_msg*/
+.realtime_msg {
+    padding: 15px 35px 15px 15px;
+    position: relative;
+    background: #fcf8e3;
+    border: 1px solid #e6d0a1;
+    color: #8a6d3b;
+    font-size: 12px;
+    line-height: 24px;
+}
+
+.realtime_msg a {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    background: url("../img/icon/iconfont-guanbi3.png") no-repeat center;
+    background-size: 100% 100%;
+    display: block;
+    height: 18px;
+    width: 18px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.realtime_msg h4 {
+    margin: 0;
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    color: #66512c;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.realtime_msg p {
+    margin: 0;
+    display: block;
+}
+
+/*hotbook*/
+.hotbook {
+    padding: 15px;
+}
+
+.hotbook h4 {
+    margin-bottom: 10px;
+    padding: 0;
+    font-size: 14px;
+}
+
+.hotbook .hotbookimg {
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+}
+
+.hotbook p {
+    margin-bottom: 10px;
+    display: block;
+    color: #1e3948;
+    font-size: 12px;
+    line-height: 24px;
+}
+
+.hotbook p a {
+    color: #1e3948;
+    font-weight: bold;
+}
+
+.hotbook p a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*hotuser*/
+.hotuser {
+    padding: 15px;
+}
+
+.hotuser h4 {
+    margin-bottom: 20px;
+    padding: 0;
+    font-size: 14px;
+}
+
+.hotuser ul {
+    margin: 0;
+    padding: 0;
+}
+
+.hotuser li {
+    margin-bottom: 20px;
+    display: block;
+    list-style: none;
+}
+
+.hotuser li a.huimg {
+    float: left;
+    background: #fff;
+    border-radius: 30px;
+    display: block;
+    height: 60px;
+    width: 60px;
+    overflow: hidden;
+}
+
+.hotuser li a.huimg img {
+    height: 100%;
+    width: 100%;
+}
+
+.hotuser li .hucon {
+    float: right;
+    width: 68%;
+}
+
+.hotuser li .hucon a.hutitle {
+    margin-bottom: 10px;
+    display: block;
+    color: #1e3948;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.hotuser li .hucon a.hutitle:hover {
+    text-decoration: none;
+}
+
+@media (min-width: 992px) and (max-width: 1150px) {
+    .hotuser li .hucon {
+        width: 60%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .hotuser li .hucon {
+        width: 88%;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 768px) {
+    .hotuser li .hucon {
+        width: 78%;
+    }
+}
+
+@media (max-width: 375px) {
+    .hotuser li .hucon {
+        width: 72%;
+    }
+}
+
+/*booksquare*/
+.booksquare_nav .nav-tabs > li > a, .booksquare_nav .nav-tabs > li > a:focus, .booksquare_nav .nav-tabs > li > a:hover {
+    padding: 11px 15px 10px;
+    border-top: none;
+    border-radius: 0;
+    color: #1e3948;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+}
+
+.booksquare_nav .nav-tabs > li.active > a, .booksquare_nav .nav-tabs > li.active > a:focus, .booksquare_nav .nav-tabs > li.active > a:hover {
+    border-bottom-color: #fff;
+}
+
+.booksquare_nav .nav-tabs > li:first-child.active > a, .booksquare_nav .nav-tabs > li:first-child.active > a:focus, .booksquare_nav .nav-tabs > li:first-child.active > a:hover {
+    border-left-color: #fff;
+}
+
+.booksquare_nav .dropdown-menu {
+    color: #1e3948;
+    font-family: "Microsoft YaHei";
+    font-size: 12px;
+}
+
+.pager_wrap, .pager_wrap_little {
+    padding: 0 15px 0 90px;
+    border-top: 1px solid #d3e0e9;
+}
+
+.pager_wrap_little {
+    padding: 0 15px;
+    font-family: "Microsoft YaHei";
+}
+
+/*bookdetail*/
+.bookdetail .swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.bookdetail .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.bookdetail .swiper-slide img {
+    width: 100%;
+}
+
+.bookdetail img {
+    height: auto;
+    width: auto;
+    max-width: 100%;
+}
+
+.bookdetail_func a {
+    margin-right: 5px;
+}
+
+.bookdetail_func a.hsbutton_blue:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.bookdetail_func a.weixin, .bookdetail_func a.qzone, .bookdetail_func a.weibo {
+    float: right;
+    margin-left: 5px;
+    margin-right: 0;
+    margin-top: 5px;
+    background: url("../img/icon/social_share.png") no-repeat;
+    background-position: 0 -160px;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+}
+
+@media (max-width: 768px) {
+    .bookdetail_func a.weixin, .bookdetail_func a.qzone, .bookdetail_func a.weibo {
+        float: left;
+        margin-left: 0;
+        margin-right: 5px;
+        margin-top: 15px;
+    }
+}
+
+.bookdetail_func a.weixin:hover, .bookdetail_func a.qzone:hover, .bookdetail_func a.weibo:hover {
+    opacity: 1;
+}
+
+.bookdetail_func a.qzone {
+    background-position: 0 -240px;
+}
+
+.bookdetail_func a.weibo {
+    background-position: 0 -200px;
+}
+
+.book_comment {
+    margin-bottom: 20px;
+}
+
+.book_comment .bc_con {
+    float: left;
+    margin-left: 10px;
+    color: #1e3948;
+    font-size: 12px;
+    line-height: 24px;
+}
+
+.book_comment .bc_pic {
+    height: 40px;
+    width: 40px;
+}
+
+.book_comment .bc_con a {
+    display: block;
+    color: #1e3948;
+    font-weight: bold;
+}
+
+.book_comment .comment_area {
+    background: #fff;
+    border: 1px solid #d3e0e9;
+    border-radius: 4px;
+    height: 80px;
+    width: 100%;
+    resize: none;
+}
+
+.book_comment .bc_con span {
+    float: left;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.book_comment .bc_con time.addtime {
+    margin: -5px 0 0 -51px;
+    display: block;
+    color: #7a7a7a;
+    font-size: 12px;
+    transform: scale(0.9);
+}
+
+.book_comment .bc_con time.addtime i {
+    margin-left: 5px;
+    font-style: normal;
+}
+
+.book_comment .bc_con a.glyphicon {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.book_comment .bc_con a:hover {
+    text-decoration: none;
+}
+
+.book_comment .bc_con a.hsbutton {
+    float: right;
+    color: #2a88bd;
+    font-weight: normal;
+    line-height: normal;
+}
+
+@media (max-width: 768px) {
+    .book_comment .bc_con a.hsbutton {
+        float: left;
+    }
+}
+
+.book_comment .bc_con a.hsbutton:hover {
+    color: #fff;
+}
+
+/*scoreStar*/
+.scoreStar:before {
+    content: "\e006";
+}
+
+/*bookedit*/
+.bookedit {
+    padding: 15px 20px;
+}
+
+.bookedit ul {
+    margin: 0;
+    padding: 0;
+}
+
+.bookedit ul li {
+    margin-bottom: 15px;
+    list-style: none;
+    font-family: "Microsoft YaHei";
+    font-size: 12px;
+}
+
+.bookedit ul li button.booktypebtn, .bookedit ul li a.bookpicupload {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-color: #cccccc;
+    color: #999999;
+    font-size: 12px;
+}
+
+.bookedit ul li a.bookpicupload:hover {
+    background: #e6e6e6;
+    color: #333333;
+}
+
+.bookedit .dropdown-menu {
+    border-top-left-radius: 0;
+}
+
+.bookedit .dropdown-menu a {
+    line-height: 32px;
+}
+
+.bookedit .dropdown-menu .divider {
+    margin: 0;
+}
+
+.bookedit .dropdown-menu li {
+    margin-bottom: 0;
+}
+
+.bookedit .input-group {
+    width: 100%;
+}
+
+.bookedit .input-group-addon, .bookedit .form-control {
+    font-size: 12px;
+}
+
+.bookedit .input-group-addon {
+    width: 75px;
+}
+
+.bookedit .bookintro_wrap {
+    position: relative;
+    width: 100%;
+}
+
+.bookedit .bookintro {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #fff;
+    border: 1px solid #d4dbe0;
+    border-radius: 4px;
+    border-top-left-radius: 0;
+    height: 80px;
+    width: 100%;
+    font-size: 12px;
+    resize: none;
+}
+
+.bookedit a.sendbook {
+    margin: 70px 0 0 75px;
+}
+
+.bookedit a.sendbook:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+/*userheader*/
+body.userinfomation {
+    padding-top: 52px;
+}
+
+.userheader {
+    position: relative;
+    margin-bottom: 30px;
+    padding-top: 100px;
+    background: url("../img/iceland.jpg") no-repeat center top;
+    height: 500px;
+    text-align: center;
+}
+
+.userheader span.userpic {
+    margin: 0 auto;
+    border-radius: 55px;
+    display: block;
+    height: 110px;
+    width: 110px;
+    overflow: hidden;
+}
+
+.userheader span.userpic img {
+    border-radius: 100%;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.userheader h4, .userheader p.userintro, .userheader .attention_info a {
+    margin-top: 25px;
+    color: #fff;
+    font-family: "Microsoft YaHei";
+    font-size: 24px;
+}
+
+.userheader p.userintro {
+    margin: 10px auto 0;
+    max-height: 56px;
+    width: 30%;
+    font-size: 14px;
+    line-height: 28px;
+    overflow: hidden;
+}
+
+.userheader .attention_info a {
+    margin: 10px 5px 0;
+    display: inline-block;
+    color: #92979a;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.userheader .attention_info a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.userheader .functab {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.userheader .functab a {
+    padding: 0 10px;
+    position: relative;
+    display: inline-block;
+    height: 50px;
+    color: #92979a;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    line-height: 18px;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+}
+
+.userheader .functab a span {
+    content: "";
+    border-width: 10px;
+    display: none;
+    position: absolute;
+    bottom: 0;
+    right: 28px;
+    border-style: solid dashed dashed;
+    border-color: transparent transparent #fff;
+    font-size: 0;
+    line-height: 0;
+}
+
+.userheader .functab a:hover, .userheader .functab a.focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+.userheader .functab a.focus span {
+    display: block;
+}
+
+.userheader a.hsbutton {
+    margin: 10px 5px 0;
+    border: none;
+}
+
+.basicinfo {
+    padding: 20px;
+    color: #1e3948;
+    font-size: 12px;
+    line-height: 32px;
+}
+
+.basicinfo tr td:last-child {
+    color: #727c83;
+}
+
+.basicinfo .bookitem {
+    padding: 0;
+}
+
+@media (min-width: 480px) and  (max-width: 768px) {
+    body.userinfomation {
+        padding-top: 50px;
+    }
+
+    .userheader {
+        padding-top: 80px;
+        height: 400px;
+    }
+
+    .userheader span.userpic {
+        height: 80px;
+        width: 80px;
+    }
+
+    .userheader p.userintro {
+        height: 28px;
+        width: 60%;
+    }
+}
+
+@media (max-width: 480px) {
+    body.userinfomation {
+        padding-top: 50px;
+    }
+
+    .userheader {
+        padding-top: 25px;
+        background-size: auto 100%;
+        height: 300px;
+    }
+
+    .userheader span.userpic {
+        height: 80px;
+        width: 80px;
+    }
+
+    .userheader p.userintro {
+        height: 28px;
+        width: 80%;
+    }
+
+    .userheader p.userintro.otheruser {
+        display: none;
+    }
+}
+
+/*notifications*/
+.notifications {
+    position: absolute;
+    visibility: hidden;
+    display: block;
+}
+
+.notifications .modal-body {
+    padding: 0;
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.notifications h4.modal-title {
+    color: #1e3948;
+    font-family: "Microsoft YaHei";
+}
+
+.notifications .bookitem {
+    padding: 0;
+}
+
+.notifications .bookitem .book_comment {
+    margin: 0;
+    padding: 15px;
+    border-bottom: 1px solid #d3e0e9;
+}
+
+.notifications .bookitem .book_comment:last-child {
+    border: none;
+}
+
+.notifications .bookitem .bc_con {
+    width: 80%;
+}
+
+.notifications .bookitem .bc_pic {
+    height: 42px;
+    width: 42px;
+}
+
+.notifications .bookitem .bc_con p {
+    margin: 0;
+}
+
+.notifications .bookitem .bc_con p a {
+    display: inline-block;
+    font-weight: normal;
+}
+
+.notifications .bookitem .bc_con p a:hover {
+    text-decoration: underline;
+}
+
+.notifications h4.modal-title.chatback {
+    color: #3097d1;
+    cursor: pointer;
+}
+
+.chatroom {
+    padding: 20px 20px 0;
+    display: none;
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.chatroom table {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.chatroom .userpic_wrap {
+    width: 42px;
+}
+
+.chatroom .userpic {
+    margin: 0;
+    border-radius: 100%;
+    display: block;
+    height: 42px;
+    width: 42px;
+    overflow: hidden;
+}
+
+.chatroom .userpic img {
+    border-radius: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+.chatroom .chatword {
+    margin-left: 15px;
+    padding: 10px;
+    position: relative;
+    background: #f5f8fa;
+    border-radius: 9px;
+    color: #1e3948;
+    font-size: 12px;
+    line-height: 24px;
+}
+
+.chatroom .chatword:after {
+    content: "";
+    border-width: 6px;
+    position: absolute;
+    left: -12px;
+    top: 12px;
+    border-style: solid;
+    border-color: transparent #f5f8fa transparent transparent;
+    font-size: 0;
+    line-height: 0;
+}
+
+.chatroom .chatword.blue {
+    margin-left: auto;
+    margin-right: 15px;
+    background: #3097d1;
+    color: #fff;
+}
+
+.chatroom .chatword.blue:after {
+    left: auto;
+    right: -12px;
+    border-color: transparent transparent transparent #3097d1;
+}
+
+.chatroom .chatuser_info {
+    margin-left: -10px;
+    padding-top: 4px;
+    color: #a9a9c1;
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+    transform: scale(0.9);
+}
+
+.chatroom .chatuser_info.ciblue {
+    margin-left: -25px;
+}
+
+.chatroom .chatuser_info span {
+    color: #3097d3;
+}
+
+.chatsend {
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+    display: none;
+    cursor: pointer;
+}
+
+.chatsend .form-control {
+    font-size: 12px;
+}
+
+.chatsend .input-group-addon {
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+}
+
+body.management {
+    font-family: "Microsoft YaHei UI Light";
+}
+
+.func_area {
+    margin-bottom: 10px;
+}
+
+.table button {
+    margin-right: 5px;
+}
+
+#blogNavTab li {
+    cursor: pointer;
+}
+
+.blog_content {
+    border: 1px solid #ddd;
+    border-top: none;
+}
+
+.blog_content table {
+    margin-bottom: 0;
+}
+
+.blog_check {
+    margin-right: 5px;
+}
+
+.blog_modal_dialog {
+    width: auto;
+    max-width: 1200px;
+}
+
+.file_check {
+    margin-right: 5px;
+}
+
+.management_panel {
+    display: none;
+}
+
+.gotopage_con {
+    display: inline-block;
+    padding: 5px 14px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+}
+
+.gotopage_con select {
+    background: none;
+    border: none;
+    color: #337ab7;
+    cursor: pointer;
+    outline: none;
+}
+
+.select_file .fa {
+    margin-right: 5px;
+}
+
+.imageCanvas {
+    display: none;
+}
+
+.image_name {
+    margin-top: 10px;
+}
+
+#blogContent {
+    font-family: Arial;
+}
+
+/*信息提示*/
+.pop_tips {
+    padding: 5px 40px;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: "微软雅黑";
+    font-size: 14px;
+    line-height: 40px;
+    white-space: normal;
+    opacity: 0;
+    z-index: 9999;
+    transition: all 0.2s ease 0s;
+}
+
+.pop_tips.focus {
+    opacity: 1;
+}
